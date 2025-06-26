@@ -1,0 +1,649 @@
+
+/* Main Variables for Primary Colors */
+:root {
+    --primary: #ff6b4a; /* Main highlight color */
+    --accent: #9fff4a; /* Accent highlight color */
+    --dark: #111; /* Dark background color */
+    --gray: #333; /* Gray background for components */
+    --light: #fff; /* Light text color */
+}
+
+/* Global Reset for Consistency */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+
+
+/* Body Styling */
+body {
+    background-color: var(--dark); /* Dark background */
+    color: var(--light); /* Light text */
+    line-height: 1.6; /* Improves text readability */
+}
+
+/* Centering Main Content */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem; /* Padding around container */
+}
+
+/* Profile Section Styling */
+.profile-card {
+    background: var(--gray); /* Gray background for profile card */
+    border-radius: 1rem; /* Rounded corners */
+    padding: 2rem; /* Internal spacing */
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+/* Profile Hover Effect */
+.profile-card:hover {
+    transform: translateY(-5px); /* Slight upward shift on hover */
+}
+
+/* Profile Image Styling */
+.profile-image {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 2rem;
+}
+
+/* Image Sizing and Positioning */
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 0.5rem; /* Rounded image corners */
+    object-fit: cover; /* Ensures the image fits within bounds */
+}
+/* أضف هذا لآخر الـ CSS */
+.stats {
+    display: none; /* يخفي الـ stats بس يخلي المساحة */
+}
+
+/* أو استخدم هذا إذا تبي المساحة تبقى بالضبط */
+.stats {
+    visibility: hidden; /* يخفي المحتوى بس يحتفظ بالمساحة */
+}
+/* Statistics Section Styling */
+.stats {
+    display: flex;
+    gap: 3rem;
+    margin: 0.1rem 0;
+    justify-content: center; /* Center the stats horizontally */
+    width: 100%; /* Ensure full width */
+}
+
+/* Individual Stat Styling */
+.stat {
+    text-align: center;
+}
+
+/* Stat Number Styling */
+.stat-number {
+    font-size: 0.1rem; /* Large font for emphasis */
+    font-weight: bold;
+    color: var(--light); /* Light text color */
+}
+
+/* Skills Section Card Styling */
+.skill-card {
+    background: var(--gray); /* Gray background for skill cards */
+    padding: 2rem;
+    border-radius: 1rem;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    text-align: center; /* Center the content */
+}
+
+/* Skill Icon Styling */
+.skill-icon {
+    font-size: 2rem; /* Larger icon size */
+    color: var(--primary); /* Primary color */
+    margin-bottom: 1rem;
+}
+
+/* Skills Grid Layout */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+/* Skill Card Hover Effect */
+.skill-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Experience Section Layout */
+.experience-section {
+    margin: 4rem 0;
+}
+
+/* Timeline Layout and Style */
+.timeline {
+    position: relative;
+    padding: 2rem 0;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 2px;
+    background: var(--primary); /* Vertical line for timeline */
+}
+
+/* Timeline Item Styling */
+.timeline-item {
+    margin-bottom: 2rem;
+    padding-left: 2rem;
+    position: relative;
+}
+
+/* Timeline Dot Styling */
+.timeline-dot {
+    position: absolute;
+    left: -6px;
+    top: 0;
+    width: 14px;
+    height: 14px;
+    background: var(--primary); /* Primary color dot */
+    border-radius: 50%; /* Circular shape */
+}
+
+/* Timeline Content Card Styling */
+.timeline-content {
+    background: var(--gray);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    transition: transform 0.3s ease;
+}
+
+/* Hover Effect on Timeline Content */
+.timeline-content:hover {
+    transform: translateX(10px); /* Shift right on hover */
+}
+
+/* Timeline Date Styling */
+.timeline-date {
+    color: var(--primary); /* Highlight date in primary color */
+    font-size: 0.9rem;
+    margin: 0.5rem 0;
+}
+
+/* Projects Section */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.project-card {
+    background: var(--gray);
+    border-radius: 1rem;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Update project images */
+.project-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center; /* Adjust image position to show top part */
+}
+
+.project-image:hover img {
+    transform: scale(1.1);
+}
+
+.project-info {
+    padding: 1.5rem;
+}
+
+
+
+
+.project-link {
+    background: var(--primary);
+    color: var(--dark);
+    padding: 0.6rem 1.2rem;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+.project-link:hover {
+   transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(255, 107, 74, 0.3);
+}
+
+.project-link::after {
+    content: '→';
+    font-size: 1rem;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+    cursor: pointer;
+}
+
+.modal-content {
+    max-width: 90%;
+    max-height: 90vh;
+    margin: auto;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.close-modal {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: var(--light);
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Profile Card Centering */
+.profile-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+/* Social Icons */
+.social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.social-icon {
+    color: var(--light);
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    border-radius: 50%;
+    background: var(--gray);
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    color: var(--dark);
+    background: var(--primary);
+    transform: translateY(-3px);
+}
+
+/* CV Button */
+.cv-button {
+    background: var(--primary);
+    color: var(--dark);
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+    margin-left: 1rem;
+}
+
+.cv-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(255, 107, 74, 0.3);
+}
+
+
+
+/* Technical Skills Section */
+.technical-skills {
+    margin: 4rem 0;
+}
+
+.skills-categories {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.skill-category {
+    background: var(--gray);
+    padding: 2rem;
+    border-radius: 1rem;
+    transition: all 0.3s ease;
+    border-left: 4px solid var(--primary);
+}
+
+.skill-category:hover {
+    transform: translateY(-5px);
+    border-left-color: var(--accent);
+}
+
+.skill-category h3 {
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.skill-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.skill-tag {
+    background: rgba(255, 107, 74, 0.1);
+    color: var(--primary);
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border: 1px solid rgba(255, 107, 74, 0.3);
+    transition: all 0.3s ease;
+}
+
+.skill-tag:hover {
+    background: var(--primary);
+    color: var(--dark);
+    transform: translateY(-2px);
+}
+
+/* Awards List Styling */
+.awards-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.award-item {
+    background: var(--gray);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    display: flex;
+    gap: 1rem;
+    transition: all 0.3s ease;
+}
+
+.award-item:hover {
+    transform: translateY(-3px);
+    border-left-color: var(--accent);
+}
+
+.award-icon {
+    min-width: 50px;
+    height: 50px;
+    background: var(--primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: var(--dark);
+}
+
+.award-details h3 {
+    color: var(--light);
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.award-institution {
+    color: var(--primary);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.award-description {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+/* Responsive for Awards */
+@media (max-width: 768px) {
+    .award-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .award-icon {
+        align-self: center;
+    }
+}
+
+
+
+/* Skills Section */
+.skills-section {
+    margin: 4rem 0;
+    background: var(--gray);
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.skills-section h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    color: var(--light);
+    border-bottom: 2px solid var(--primary);
+    padding-bottom: 0.5rem;
+}
+
+.skills-columns {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.skill-column h3 {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: var(--light);
+    margin-bottom: 0.5rem;
+}
+
+.skill-column ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.skill-column li {
+    color: var(--light);
+    margin-bottom: 0.2rem;
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+/* Honors & Awards - Reusing Tools Section Style */
+.honors-awards {
+    margin: 4rem 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .skills-columns {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
+
+
+/* Tools Section */
+.premium-tools {
+    margin: 4rem 0;
+}
+
+
+
+
+
+.tools-subheader {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    font-size: 3rem;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.1);
+    text-transform: uppercase;
+}
+
+.tools-categories h3 {
+    font-size: 1.5rem;
+    margin: 2rem 0;
+    color: var(--primary);
+}
+
+.tools-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.tool-card {
+    background: var(--gray);
+    border-radius: 1rem;
+    padding: 2rem;
+    text-align: left;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.tool-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.tool-icon {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.tool-card h4 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: var(--light);
+}
+
+.tool-card p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.footer {
+    background: var(--gray);
+    padding: 2rem 0;
+    margin-top: 4rem;
+    text-align: center;
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer-content {
+    padding: 0 2rem;
+}
+
+.footer i.fa-heart {
+    color: var(--primary);
+    margin: 0 0.2rem;
+}
+
+.footer-year {
+    margin-top: 0.5rem;
+    color: #888;
+}
+
+
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .profile-content {
+        padding: 1rem;
+    }
+
+    .social-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .cv-button {
+        margin: 1rem 0 0 0;
+    }
+
+    .tools-grid {
+        grid-template-columns: repeat(2, 1fr) !important; /* Force two columns on mobile */
+        gap: 1rem; /* Reduce gap for better mobile fit */
+    }
+
+    .tool-card {
+        padding: 1rem; /* Reduce padding for mobile */
+    }
+}
